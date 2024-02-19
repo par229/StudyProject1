@@ -1,0 +1,35 @@
+.board-list-container {
+  width: 200px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* 고정 위치로 설정 */
+  top: 0; /* 상단에 고정 */
+  left: 0; /* 좌측에 고정 */
+  height: 100%; /* 높이 100%로 설정 */
+  overflow-y: auto; /* 스크롤이 필요한 경우 스크롤 허용 */
+}
+
+.board-list-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.board-list-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.board-list-container li {
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.board-list-container li:hover {
+  background-color: #e0e0e0;
+}

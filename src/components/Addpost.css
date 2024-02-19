@@ -1,0 +1,51 @@
+/* addpost.css */
+
+.add-post-container {
+  padding: 5%;
+  background-color: #ffffff;
+  border-radius: 100px; /* Adjusted for better appearance */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 5%;
+}
+
+.add-post-container h2 {
+  text-align: center;
+  color: #333;
+  display: inline; /* Display inline to make it horizontal */
+}
+
+.add-post-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.add-post-container label {
+  display: block;
+}
+
+.add-post-container input{
+  width: 300%; /* Adjusted for responsiveness */
+  padding: 10px;
+  margin-top: 2px;
+}
+
+
+.add-post-container textarea {
+  width: 225%; /* Adjusted for responsiveness */
+  padding: 100px;
+  margin-top: 2px;
+}
+
+.add-post-container button {
+  padding: 15px;
+  background-color: #d40a0a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-post-container button:hover {
+  background-color: #d1471d;
+}
