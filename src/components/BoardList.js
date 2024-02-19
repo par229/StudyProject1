@@ -1,7 +1,7 @@
 // BoardList.js
+
 import React, { useState } from 'react';
 import './BoardList.css';
-import AddPost from './Addpost'; // AddPost 컴포넌트 추가
 
 const BoardList = ({ onAddPost }) => {
   const [showAddPost, setShowAddPost] = useState(false);
@@ -10,16 +10,7 @@ const BoardList = ({ onAddPost }) => {
   const handleAddPostClick = (board) => {
     setSelectedBoard(board);
     setShowAddPost(true);
-  };
-
-  const handlePostSubmit = (postData) => {
-    // 게시글 추가 로직을 수행
-    console.log('게시글 추가:', postData);
-    // 추가로 필요한 동작 수행
-
-    // 게시글 추가 후 상태 초기화
-    setSelectedBoard(null);
-    setShowAddPost(false);
+    onAddPost(); // 추가
   };
 
   return (
@@ -35,7 +26,22 @@ const BoardList = ({ onAddPost }) => {
       </div>
 
       {showAddPost && (
-        <AddPost selectedBoard={selectedBoard} onPostSubmit={handlePostSubmit} />
+        <div className="add-post-container">
+          <h2>{selectedBoard}</h2>
+          <form>
+            <label>
+              제목:
+              <input type="text" name="title" />
+            </label>
+            <br />
+            <label>
+              내용:
+              <textarea name="content" rows="4" />
+            </label>
+            <br />
+            <button type="submit">게시글 추가</button>
+          </form>
+        </div>
       )}
     </div>
   );

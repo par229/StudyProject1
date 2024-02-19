@@ -7,7 +7,7 @@
 
 .main-container {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .add-post-container {
