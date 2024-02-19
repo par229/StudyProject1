@@ -10,7 +10,23 @@ const BoardList = ({ onAddPost }) => {
   const handleAddPostClick = (board) => {
     setSelectedBoard(board);
     setShowAddPost(true);
-    onAddPost(); // 추가
+  };
+
+  const handlePostSubmit = (e) => {
+    e.preventDefault();
+    // Implement the logic to add a post
+    const newPost = {
+      id: Date.now(), // Temporary unique ID (replace with actual ID from the database)
+      title: e.target.title.value,
+      content: e.target.content.value,
+    };
+
+    // Additional actions if needed
+
+    // Reset states after adding post
+    setSelectedBoard(null);
+    setShowAddPost(false);
+    onAddPost(selectedBoard, newPost); // Pass the board and new post to App.js
   };
 
   return (
@@ -28,7 +44,7 @@ const BoardList = ({ onAddPost }) => {
       {showAddPost && (
         <div className="add-post-container">
           <h2>{selectedBoard}</h2>
-          <form>
+          <form onSubmit={handlePostSubmit}>
             <label>
               제목:
               <input type="text" name="title" />

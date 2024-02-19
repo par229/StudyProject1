@@ -1,0 +1,30 @@
+/* TopContainer.css */
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-section, .center-section, .right-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login-button, .main-button, .goback-button {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover, .main-button:hover, .goback-button:hover {
+    background-color: #0056b3;
+  }
+  
