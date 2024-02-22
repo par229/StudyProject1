@@ -1,11 +1,12 @@
-// App.js
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Login from './components/Login';
 import BoardList from './components/BoardList';
 import EachList from './components/EachList';
 import TopContainer from './components/TopContainer';
+import axios from 'axios'; // 추가된 부분
+
 import './App.css';
+
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [currentBoard, setCurrentBoard] = useState(null);
@@ -23,14 +24,18 @@ const App = () => {
     setShowAddPost(false);
   };
 
-  const handleAddPost = (board, newPost) => {
-    // Implement the logic to add a post to the specified board
+  const handleAddPost = async (board, newPost) => {
     const updatedPosts = { ...posts, [board]: [...posts[board], newPost] };
     setPosts(updatedPosts);
 
-    // Additional actions if needed
+    // API를 통해 서버에 데이터 전송
+    try {
+      const response = await axios.post('http://localhost:8000/posts/', newPost);
+      console.log(response.data); // 생성 결과 출력
+    } catch (error) {
+      console.error('Error creating post:', error);
+    }
 
-    // Reset states after adding post
     setCurrentBoard(null);
     setShowAddPost(false);
   };
@@ -39,16 +44,42 @@ const App = () => {
     setCurrentBoard(null);
     setShowAddPost(false);
   };
-  const handlePostSubmit = (e) => {
-    e.preventDefault();
-    // Implement the logic to add a post
-    console.log('게시글 추가:', { board: currentBoard, title: e.target.title.value, content: e.target.content.value });
-    // Additional actions if needed
 
-    // Reset states after adding post
+  const handlePostSubmit = async (e) => {
+    e.preventDefault();
+    const newPost = {
+      title: e.target.title.value,
+      content: e.target.content.value,
+      user_id: 1, // 임의의 사용자 ID, 실제로는 로그인 기능을 통해 동적으로 설정해야 함
+      BB_code: 1, // 임의의 게시판 ID, 실제로는 동적으로 설정해야 함
+      created_date: new Date(),
+    };
+
+    // API를 통해 서버에 데이터 전송
+    try {
+      const response = await axios.post('http://localhost:8000/posts/', newPost);
+      console.log(response.data); // 생성 결과 출력
+    } catch (error) {
+      console.error('Error creating post:', error);
+    }
+
     setCurrentBoard(null);
     setShowAddPost(false);
   };
+
+  useEffect(() => {
+    // 게시글 조회 API 호출
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get('http://localhost:8000/posts/');
+        setPosts(response.data); // 서버에서 받은 게시글 목록으로 업데이트
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      }
+    };
+
+    fetchPosts();
+  }, []); // 컴포넌트가 마운트될 때 한 번만 호출
 
   return (
     <div className="app-container">
@@ -82,7 +113,7 @@ const App = () => {
           {(currentBoard && !showAddPost) && (
             <EachList
               boardName={currentBoard}
-              posts={posts[currentBoard]} // Pass the posts of the current board
+              posts={posts[currentBoard]}
               onPostClick={(post) => {}}
               onAddPostClick={handleAddPost}
               onGoBackClick={handleGoBack}
