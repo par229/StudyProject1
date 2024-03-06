@@ -1,0 +1,40 @@
+/* ProjectList.css */
+
+.project-list {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.project-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.project-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  margin-bottom: 5px;
+}
+
+.project-item strong {
+  margin-right: 5px;
+}
+
+.project-item button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.project-item button:hover {
+  background-color: #c9302c;
+}

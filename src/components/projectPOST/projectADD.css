@@ -1,0 +1,86 @@
+.project-add {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+
+  /* Set a specific height (for example, 500px) */
+  height: 900px;
+}
+
+.project-add h2 {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.project-add form {
+  display: grid;
+  gap: 10px;
+}
+
+.project-add label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.project-add input{
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.project-add select{
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.project-add input[type="file"] {
+  margin-top: 10px; /* Adjust the margin-top value as needed */
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Optional: Style for the file input label */
+.project-add label[for="file"] {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.project-add textarea{
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.project-add button {
+  width: 20%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.project-add button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px; /* Adjust the margin-top value to add more space */
+}
+
+.project-add input[type="file"] {
+  margin-top: 20px; /* Adjust the margin-top value to add more space */
+}

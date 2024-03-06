@@ -1,0 +1,77 @@
+/* App.css */
+
+/* 스타일을 추가할 수 있습니다. 예를 들면 전체 앱의 배경색을 지정하거나, 폰트 스타일을 설정할 수 있습니다. */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* 예시로 App 컴포넌트 전체의 스타일을 추가했습니다. */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* App 컴포넌트 안에서 LoginScreen과 MainScreen을 각각 스타일링할 수 있습니다. */
+
+/* 로그인 화면 스타일 */
+.login-screen {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-screen h2 {
+  margin-bottom: 20px;
+}
+
+.login-screen input {
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.login-screen button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* 메인 화면 스타일 */
+/* 메인 화면 스타일 */
+.main-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-screen h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* 예시로 세로로 나열된 아이템들을 스타일링합니다. */
+.main-screen .item {
+  background-color: #a62e2e;
+  border: 1px solid #e46868;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 예시로 수평으로 나열된 아이템들을 스타일링합니다. */
+.main-screen .horizontal-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 그 외 다양한 스타일을 추가할 수 있습니다. */

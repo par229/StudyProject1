@@ -1,0 +1,39 @@
+/* post.css */
+
+/* 게시글 추가 입력창 스타일 */
+.post-container {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input{
+    width: 80%;
+    height: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  textarea {
+    width: 80%;
+    height: 300px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

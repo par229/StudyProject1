@@ -1,0 +1,47 @@
+/* pmh.css */
+
+/* 게시판 스타일 */
+.pmh-board {
+    margin-top: 20px;
+  }
+  
+  /* 게시글 목록 스타일 */
+  .post-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .post-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .post-number {
+    margin-right: 10px;
+  }
+  
+  .post-title {
+    flex: 1;
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  .post-timestamp {
+    margin-left: 10px;
+    color: #888;
+  }
+  
+  .selected-post {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .selected-post h3 {
+    color: #007bff;
+  }
+  

@@ -1,0 +1,107 @@
+/* mainSC.css */
+
+.main-screen {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.top-section {
+  background: url('./images/Topbn.png') center/250% auto no-repeat;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-buttons {
+  display: flex;
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.menu-button .icon {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.bottom-section {
+  display: flex;
+  flex: 1;
+}
+
+.left-section {
+  width: 200px;
+  padding: 20px;
+  background-color: #82d7a3;
+}
+
+.right-section {
+  width: 800px;
+  padding: 20px;
+  background-color: #99e1de;
+  overflow-y: auto; /* 추가: 세로 스크롤을 보여줌 */
+  max-height: 80vh; /* 추가: 최대 높이를 화면의 80%로 제한 */
+}
+
+.left-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.left-section li:hover {
+  text-decoration: underline;
+}
+
+.right-section h2 {
+  margin-bottom: 40px;
+  font-size: 20px;
+  color: #333;
+}
+
+.right-section div {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-section h2 {
+  color: #333;
+}
+
+.right-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right-section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}
+
+.right-section li:hover {
+  text-decoration: underline;
+}
